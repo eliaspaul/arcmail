@@ -1,3 +1,57 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-sidebar: #f0f0f0;
+  --bg-bubble-out: #000000;
+  --bg-bubble-in: #e9e9eb;
+  --text-primary: #000000;
+  --text-secondary: #6b6b6b;
+  --text-bubble-out: #ffffff;
+  --text-bubble-in: #000000;
+  --border-color: #e0e0e0;
+  --hover-color: #f5f5f5;
+  --active-color: #ebebeb;
+  --input-bg: #f5f5f5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #1c1c1e;
+    --bg-secondary: #2c2c2e;
+    --bg-sidebar: #1c1c1e;
+    --bg-bubble-out: #0a84ff;
+    --bg-bubble-in: #3a3a3c;
+    --text-primary: #ffffff;
+    --text-secondary: #aeaeb2;
+    --text-bubble-out: #ffffff;
+    --text-bubble-in: #ffffff;
+    --border-color: #3a3a3c;
+    --hover-color: #2c2c2e;
+    --active-color: #3a3a3c;
+    --input-bg: #2c2c2e;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  height: 100vh;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
